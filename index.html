@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <!-- TODO(name): "GloPose" is a placeholder project name; finalize before submission. -->
+  <meta name="title" content="GloPose: Model-free 6DoF Object Onboarding via Dense Matching">
+  <meta name="description" content="GloPose onboards novel objects from a video via dense matching, producing posed 3D reconstructions for model-free 6DoF object detection and pose estimation.">
+  <meta name="keywords" content="dense matching, 6DoF pose estimation, model-free, object onboarding, 3D reconstruction, structure from motion, BOP, computer vision">
+  <!-- TODO(authors): replace with the full author list once confirmed. -->
+  <meta name="author" content="Tomáš Jelínek">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Visual Recognition Group, CTU in Prague">
+  <meta property="og:title" content="GloPose: Model-free 6DoF Object Onboarding via Dense Matching">
+  <meta property="og:description" content="GloPose onboards novel objects from a video via dense matching, producing posed 3D reconstructions for model-free 6DoF object detection and pose estimation.">
+  <meta property="og:url" content="https://tjelinek.github.io/glopose-page/">
+  <!-- TODO(asset): create a 1200x630 social_preview.png teaser. -->
+  <meta property="og:image" content="https://tjelinek.github.io/glopose-page/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GloPose teaser">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GloPose: Model-free 6DoF Object Onboarding via Dense Matching">
+  <meta name="twitter:description" content="GloPose onboards novel objects from a video via dense matching, producing posed 3D reconstructions for model-free 6DoF object detection and pose estimation.">
+  <meta name="twitter:image" content="https://tjelinek.github.io/glopose-page/static/images/social_preview.png">
+
+  <!-- Academic/Research Specific -->
+  <!-- TODO(meta): fill venue + pdf url once the paper is public. -->
+  <meta name="citation_title" content="GloPose: Model-free 6DoF Object Onboarding via Dense Matching">
+  <meta name="citation_author" content="Jelínek, Tomáš">
+  <meta name="citation_publication_date" content="2026">
+
+  <!-- SEO / theming -->
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>GloPose: Model-free 6DoF Object Onboarding via Dense Matching</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "GloPose: Model-free 6DoF Object Onboarding via Dense Matching",
+    "description": "GloPose onboards novel objects from a video via dense matching, producing posed 3D reconstructions for model-free 6DoF object detection and pose estimation.",
+    "author": [
+      { "@type": "Person", "name": "Tomáš Jelínek",
+        "affiliation": { "@type": "Organization", "name": "Czech Technical University in Prague" } }
+    ],
+    "datePublished": "2026",
+    "url": "https://tjelinek.github.io/glopose-page/",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO(name): finalize project/paper title. -->
+            <h1 class="title is-1 publication-title">GloPose</h1>
+            <h2 class="subtitle is-3 publication-title">Model-free 6DoF Object Onboarding via Dense Matching</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO(authors): replace with the full author list + personal links. -->
+              <span class="author-block">
+                <a href="https://github.com/tjelinek" target="_blank">Tomáš Jelínek</a>,</span>
+              <span class="author-block"><em>co-authors TBD</em></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- TODO(affiliation/venue): confirm. -->
+              <span class="author-block">Visual Recognition Group, Czech Technical University in Prague<br>Preprint — 2026</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- TODO(arxiv): update with arXiv id when available. -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/tjelinek/GloPose" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <!-- arXiv -->
+            <span class="link-block">
+              <a href="#" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser placeholder -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO(asset): drop a teaser figure at static/images/teaser.png (and a banner video at
+           static/videos/banner_video.mp4) and replace this placeholder block. -->
+      <div class="content has-text-centered" style="border:2px dashed #cbd5e1;border-radius:12px;padding:3rem 1rem;color:#64748b;">
+        <p><i class="fas fa-image"></i>&nbsp; Teaser figure coming soon.</p>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <!-- TODO(caption): one-sentence summary of the teaser. -->
+        Given a short video of a novel object, GloPose selects keyframes, densely matches them, and
+        reconstructs a posed 3D model used for downstream detection and 6DoF pose estimation.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO(abstract): replace this draft with the final abstract from the Overleaf paper. -->
+          <p>
+            <em>[Draft placeholder — to be replaced with the paper abstract.]</em>
+            GloPose is a model-free 6DoF object pose estimation system following the BOP benchmark
+            paradigm. From a video or image stream of a novel object, it produces a posed 3D
+            reconstruction and a detection-ready representation, which are then used to detect the
+            object and estimate its 6DoF pose in novel images. At the core of the onboarding stage is
+            dense matching, used both for adaptive keyframe selection and for establishing
+            correspondences that drive structure-from-motion reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- =====================================================================
+     MEDIA SECTIONS (commented out until real assets exist).
+     Re-enable and fill in once teaser/result images and videos are ready:
+       - Image carousel:  static/images/carousel{1..4}.jpg
+       - Video carousel:  static/videos/carousel{1..3}.mp4
+       - YouTube talk:    embed id
+       - Poster:          static/pdfs/poster.pdf
+     ===================================================================== -->
+<!--
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/carousel1.jpg" alt="Result 1" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">First result.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <!-- TODO(bibtex): replace with the entry from the Overleaf paper once finalized. -->
+      <pre id="bibtex-code"><code>@misc{jelinek2026glopose,
+  title={GloPose: Model-free 6DoF Object Onboarding via Dense Matching},
+  author={Jel\'inek, Tom\'a\v{s} and others},
+  year={2026},
+  note={Preprint},
+  url={https://tjelinek.github.io/glopose-page/}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </main>
+  </body>
+  </html>
