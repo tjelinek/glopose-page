@@ -1,7 +1,10 @@
-# GloPose — project page
+# Project page — *Dense Matchers for Dense Object Reconstruction*
 
-Source for the GloPose project page, served via GitHub Pages at
+Source for the project page (codebase: **GloPose**), served via GitHub Pages at
 **https://tjelinek.github.io/glopose-page/**.
+
+Paper: *Dense Matchers for Dense Object Reconstruction* — Tomáš Jelínek, Dmytro Mishkin, Jiří Matas
+(Visual Recognition Group, CTU in Prague). Title/authors/abstract/BibTeX mirror the Overleaf paper.
 
 Built from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template)
 (Nerfies-derived). Static HTML/CSS/JS — no build step.
@@ -14,18 +17,20 @@ Edit `index.html`, commit, and push to `main`; GitHub Pages redeploys automatica
 git add -A && git commit -m "Update page" && git push
 ```
 
+> Note: this repo's `origin` uses **SSH** (`git@github.com:tjelinek/glopose-page.git`) — the HTTPS
+> credential helper wasn't working on this machine.
+
 ## TODO before submission
 
-Search `index.html` for `TODO(...)` markers:
+Search `index.html` for `TODO(...)` markers (title/authors/abstract/BibTeX are already filled from the paper):
 
-- `TODO(name)` — finalize the project/paper name (currently the placeholder "GloPose"; the repo can be
-  renamed later — GitHub auto-redirects the old URL).
-- `TODO(authors)` / `TODO(affiliation/venue)` — full author list, affiliations, venue.
-- `TODO(abstract)` — replace the draft with the paper abstract.
-- `TODO(arxiv)` — arXiv id and PDF links.
-- `TODO(bibtex)` — final BibTeX entry.
+- `TODO(venue)` — set the venue once decided (paper is a WACV 2026 submission; page omits it for now).
+- `TODO(arxiv)` — arXiv id, and wire the **Paper**/**arXiv** buttons (currently `href="#"`).
+- `TODO(bibtex)` — switch from the `@misc` preprint entry to the published `@inproceedings` on acceptance.
 - `TODO(asset)` — teaser figure (`static/images/teaser.png`), a 1200×630 `social_preview.png`,
-  and result carousel images/videos. The media sections are commented out in `index.html` until assets exist.
+  and result carousel images/videos. Media sections are commented out in `index.html` until assets exist.
+  Candidate source figures live in the paper repo: `glopose-paper/imgs/`, `glopose-paper/figs/`.
+- `TODO(name)` — if the project is renamed, the repo can be renamed too (GitHub auto-redirects the old URL).
 
 **Also replace `static/images/favicon.ico`** — the template ships with the template author's favicon.
 
