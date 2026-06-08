@@ -32,7 +32,7 @@ Search `index.html` for `TODO(...)` markers (title/authors/abstract/BibTeX are a
   Candidate source figures live in the paper repo: `glopose-paper/imgs/`, `glopose-paper/figs/`.
 - `TODO(name)` — if the project is renamed, the repo can be renamed too (GitHub auto-redirects the old URL).
 
-**Also replace `static/images/favicon.ico`** — the template ships with the template author's favicon.
+The favicon was intentionally removed (blank browser-tab icon via `<link rel="icon" href="data:,">`).
 
 ## Layout
 
